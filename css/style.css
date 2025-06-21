@@ -154,11 +154,13 @@ header {
 
 .btn-primary {
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-color);
+    font-weight: 600;
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
+    color: var(--bg-color);
     transform: translateY(-2px);
 }
 

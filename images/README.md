@@ -13,6 +13,7 @@ This directory should contain all your portfolio images:
 - `hoody-robot.jpg` - Hoody smart kitchen hood robot (3D model or prototype)
 - `ml-model-comparison.png` - Machine learning model performance comparison chart
 - `ml-optimization-progress.png` - Hyperparameter optimization progress visualization
+- `patent-design.jpg` - Photo of patented soft-tip pole braking system product
 - `weather-api.jpg` - API documentation or interface screenshot
 - `blog-platform.jpg` - Blog platform screenshot
 - `code-generator.jpg` - CLI tool screenshot
