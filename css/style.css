@@ -19,17 +19,18 @@ body {
 
 /* CSS Variables */
 :root {
-    --primary-color: #3b82f6;
-    --primary-dark: #1d4ed8;
-    --secondary-color: #64748b;
-    --accent-color: #f59e0b;
-    --bg-color: #ffffff;
-    --bg-secondary: #f8fafc;
-    --text-color: #1e293b;
-    --text-light: #64748b;
-    --border-color: #e2e8f0;
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --primary-color: #8b5cf6;
+    --primary-dark: #7c3aed;
+    --secondary-color: #a78bfa;
+    --accent-color: #c084fc;
+    --bg-color: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-card: #16213e;
+    --text-color: #e2e8f0;
+    --text-light: #94a3b8;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgb(139 92 246 / 0.1), 0 2px 4px -2px rgb(139 92 246 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(139 92 246 / 0.2), 0 4px 6px -4px rgb(139 92 246 / 0.1);
     --border-radius: 0.5rem;
     --transition: all 0.3s ease;
 }
@@ -66,7 +67,7 @@ p {
 
 /* Header and Navigation */
 header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 15, 35, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
@@ -249,11 +250,12 @@ header {
 }
 
 .project-card {
-    background: var(--bg-color);
+    background: var(--bg-card);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -306,10 +308,11 @@ header {
 }
 
 .skill-category {
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
+    border: 1px solid var(--border-color);
 }
 
 .skill-category h3 {
@@ -393,9 +396,10 @@ header {
 }
 
 .skill-item {
-    background: var(--bg-color);
+    background: var(--bg-card);
     padding: 1.5rem;
     border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
 }
 
 .skill-name {
@@ -429,11 +433,12 @@ header {
 }
 
 .timeline-item {
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
     border-left: 4px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .timeline-item h3 {
@@ -469,11 +474,12 @@ header {
 }
 
 .cert-item {
-    background: var(--bg-color);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 .cert-item h3 {
@@ -662,8 +668,9 @@ header {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
 }
 
 .contact-icon {
@@ -694,10 +701,11 @@ header {
 }
 
 .availability {
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     margin-top: 2rem;
+    border: 1px solid var(--border-color);
 }
 
 .status.available {
@@ -716,9 +724,10 @@ header {
 }
 
 .contact-form {
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -741,7 +750,8 @@ header {
     border-radius: var(--border-radius);
     font-size: 1rem;
     transition: var(--transition);
-    background: var(--bg-color);
+    background: var(--bg-secondary);
+    color: var(--text-color);
 }
 
 .form-group input:focus,
@@ -783,9 +793,10 @@ header {
 }
 
 .faq-item {
-    background: var(--bg-color);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
 }
 
 .faq-item h3 {
@@ -807,9 +818,10 @@ header {
 
 .location-details,
 .work-hours {
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
 }
 
 .location-details h3,
