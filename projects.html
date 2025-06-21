@@ -40,6 +40,7 @@
                     <button class="filter-btn" data-filter="api">APIs</button>
                     <button class="filter-btn" data-filter="tools">Tools</button>
                     <button class="filter-btn" data-filter="robotics">Robotics</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
                 </div>
             </div>
         </section>
@@ -84,27 +85,41 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="mobile">
+                    <div class="project-card" data-category="ml">
                         <div class="project-image">
-                            <img src="images/task-manager.jpg" alt="Task Management App">
+                            <img src="images/ml-model-comparison.png" alt="Movie Score Prediction ML Model">
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="#" class="btn btn-primary">Live Demo</a>
+                                    <a href="#" class="btn btn-primary">View Demo</a>
                                     <a href="#" class="btn btn-outline">GitHub</a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Task Management App</h3>
+                            <h3>Movie Score Prediction ML System</h3>
                             <p class="project-description">
-                                Cross-platform mobile app for team collaboration with 
-                                real-time updates and offline synchronization.
+                                End-to-end machine learning pipeline using CatBoost regression to predict IMDb 
+                                movie scores. Achieved 17% improvement over baseline with comprehensive 
+                                hyperparameter optimization and production deployment.
                             </p>
                             <div class="tech-stack">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Redux</span>
-                                <span class="tech-tag">AsyncStorage</span>
+                                <span class="tech-tag">CatBoost</span>
+                                <span class="tech-tag">Optuna</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-features">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>17% performance improvement over baseline (Test RMSE: 0.70)</li>
+                                    <li>Bayesian hyperparameter optimization with 50 trials</li>
+                                    <li>Production-ready FastAPI deployment with Docker</li>
+                                    <li>Comprehensive evaluation with 5-fold cross-validation</li>
+                                    <li>Interactive Streamlit web interface for predictions</li>
+                                    <li>Robust preprocessing pipeline with outlier detection</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

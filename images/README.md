@@ -11,6 +11,8 @@ This directory should contain all your portfolio images:
 - `ecommerce-platform.jpg` - Detailed screenshot for projects page
 - `task-manager.jpg` - Mobile app screenshots
 - `hoody-robot.jpg` - Hoody smart kitchen hood robot (3D model or prototype)
+- `ml-model-comparison.png` - Machine learning model performance comparison chart
+- `ml-optimization-progress.png` - Hyperparameter optimization progress visualization
 - `weather-api.jpg` - API documentation or interface screenshot
 - `blog-platform.jpg` - Blog platform screenshot
 - `code-generator.jpg` - CLI tool screenshot
