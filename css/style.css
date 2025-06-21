@@ -315,7 +315,7 @@ header {
 
 /* Skills Preview */
 .skills-preview {
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .skills-preview h2 {
@@ -326,12 +326,12 @@ header {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .skill-category {
     background: var(--bg-card);
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: var(--border-radius);
     text-align: center;
     border: 1px solid var(--border-color);
