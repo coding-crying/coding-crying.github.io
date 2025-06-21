@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Name</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Your Name</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p class="subtitle">A showcase of my development work and creative solutions</p>
+            </div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="api">APIs</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="robotics">Robotics</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid-section">
+            <div class="container">
+                <div class="projects-grid">
+                    
+                    <div class="project-card featured" data-category="web">
+                        <div class="project-image">
+                            <img src="images/ecommerce-platform.jpg" alt="E-Commerce Platform">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Live Demo</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Platform</h3>
+                            <p class="project-description">
+                                Full-featured e-commerce platform with user authentication, 
+                                payment processing, inventory management, and admin dashboard.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe API</span>
+                                <span class="tech-tag">JWT</span>
+                            </div>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Responsive design for all devices</li>
+                                    <li>Secure payment processing</li>
+                                    <li>Real-time inventory tracking</li>
+                                    <li>Admin dashboard with analytics</li>
+                                    <li>Email notifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="images/task-manager.jpg" alt="Task Management App">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Live Demo</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Management App</h3>
+                            <p class="project-description">
+                                Cross-platform mobile app for team collaboration with 
+                                real-time updates and offline synchronization.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">AsyncStorage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="robotics">
+                        <div class="project-image">
+                            <img src="images/hoody-robot.jpg" alt="Hoody - Smart Kitchen Hood Robot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="docs/social-robotics-report.pdf" class="btn btn-primary" target="_blank">View Report</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Hoody - Intelligent Kitchen Assistant Robot</h3>
+                            <p class="project-description">
+                                Research project developing an AI-powered social robot integrated into a kitchen hood 
+                                form factor. Addresses challenges in home cooking through advanced multimodal interaction, 
+                                real-time environmental monitoring, and personalized culinary guidance systems.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ChatGPT Real-time API</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Thermal Imaging</span>
+                                <span class="tech-tag">Hand Tracking</span>
+                                <span class="tech-tag">IoT Integration</span>
+                                <span class="tech-tag">Sensor Fusion</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">3D Modeling</span>
+                            </div>
+                            <div class="project-features">
+                                <h4>Research Contributions:</h4>
+                                <ul>
+                                    <li>Novel integration of LLM with kitchen appliance hardware</li>
+                                    <li>Multi-sensor fusion for real-time cooking state detection</li>
+                                    <li>Computer vision-based hand gesture classification system</li>
+                                    <li>User-centered design methodology for kitchen robotics</li>
+                                    <li>Adaptive recipe management with IoT ecosystem integration</li>
+                                    <li>Safety-critical AI system with multimodal override capabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="api">
+                        <div class="project-image">
+                            <img src="images/weather-api.jpg" alt="Weather API Service">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Documentation</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather API Service</h3>
+                            <p class="project-description">
+                                RESTful API service providing weather data with caching, 
+                                rate limiting, and comprehensive documentation.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">OpenWeather API</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="images/blog-platform.jpg" alt="Blog Platform">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Live Demo</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Blog Platform</h3>
+                            <p class="project-description">
+                                Modern blog platform with markdown support, SEO optimization, 
+                                and content management system.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Prisma</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="tools">
+                        <div class="project-image">
+                            <img src="images/code-generator.jpg" alt="Code Generator Tool">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Try It</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Code Generator Tool</h3>
+                            <p class="project-description">
+                                CLI tool for generating boilerplate code and project 
+                                scaffolding with customizable templates.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Commander.js</span>
+                                <span class="tech-tag">Handlebars</span>
+                                <span class="tech-tag">NPM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="images/portfolio-generator.jpg" alt="Portfolio Generator">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Live Demo</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio Generator</h3>
+                            <p class="project-description">
+                                Web application that generates professional portfolios 
+                                from user input with multiple themes and export options.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Vuetify</span>
+                                <span class="tech-tag">Puppeteer</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="images/expense-tracker.jpg" alt="Expense Tracker">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary">Download</a>
+                                    <a href="#" class="btn btn-outline">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Expense Tracker</h3>
+                            <p class="project-description">
+                                Personal finance app with budget tracking, expense 
+                                categorization, and financial goal setting.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Provider</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="project-stats">
+            <div class="container">
+                <h2>Project Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>25+</h3>
+                        <p>Technologies Used</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100K+</h3>
+                        <p>Lines of Code Written</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Open Source Contributions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Interested in Working Together?</h2>
+                <p>I'm always open to discussing new opportunities and exciting projects.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

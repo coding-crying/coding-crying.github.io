@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Your Name</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Your Name</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p class="subtitle">Let's discuss your next project or opportunity</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Let's Connect</h2>
+                        <p>
+                            I'm always interested in hearing about new opportunities, 
+                            whether it's a full-time position, freelance project, or 
+                            just a chat about technology and development.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <span>📧</span>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>your.email@example.com</p>
+                                    <a href="mailto:your.email@example.com">Send Email</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <span>💼</span>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>LinkedIn</h3>
+                                    <p>Connect with me professionally</p>
+                                    <a href="https://linkedin.com/in/yourprofile" target="_blank">View Profile</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <span>💻</span>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>GitHub</h3>
+                                    <p>Check out my code and projects</p>
+                                    <a href="https://github.com/yourusername" target="_blank">View GitHub</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <span>🐦</span>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Twitter</h3>
+                                    <p>Follow me for tech updates</p>
+                                    <a href="https://twitter.com/yourusername" target="_blank">Follow @yourusername</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h3>Current Availability</h3>
+                            <p class="status available">✅ Available for new opportunities</p>
+                            <p class="response-time">Typical response time: 24-48 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send Me a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="job-opportunity">Job Opportunity</option>
+                                    <option value="freelance-project">Freelance Project</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Project Budget (if applicable)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="over-50k">Over $50,000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Project Timeline (if applicable)</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="2-3-months">2-3 months</option>
+                                    <option value="3-6-months">3-6 months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          placeholder="Tell me about your project, requirements, or what you'd like to discuss..."></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to my newsletter for development tips and updates</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large">
+                                Send Message
+                            </button>
+                        </form>
+                        
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. I'll get back to you within 24-48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>What types of projects do you work on?</h3>
+                        <p>
+                            I specialize in web applications, mobile apps, APIs, and full-stack 
+                            development. I'm particularly interested in projects involving modern 
+                            JavaScript frameworks, cloud services, and innovative solutions.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What's your typical project timeline?</h3>
+                        <p>
+                            Project timelines vary depending on complexity and scope. Small projects 
+                            might take 1-2 weeks, while larger applications can take 2-6 months. 
+                            I always provide realistic estimates upfront.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Do you work remotely?</h3>
+                        <p>
+                            Yes, I work remotely and have experience collaborating with distributed 
+                            teams. I'm comfortable with various communication tools and time zones.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What's your development process?</h3>
+                        <p>
+                            I follow agile methodologies with regular check-ins, iterative development, 
+                            and continuous feedback. I prioritize clear communication and delivering 
+                            working software frequently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <div class="container">
+                <h2>Location & Availability</h2>
+                <div class="location-info">
+                    <div class="location-details">
+                        <h3>📍 Based in City, Country</h3>
+                        <p>Timezone: UTC+0</p>
+                        <p>Available for remote work globally</p>
+                        <p>Open to relocation for the right opportunity</p>
+                    </div>
+                    <div class="work-hours">
+                        <h3>⏰ Typical Working Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Weekend availability for urgent projects</p>
+                        <p>Flexible hours for different time zones</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
