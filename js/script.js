@@ -44,7 +44,7 @@ function initMobileMenu() {
         .burger div {
             width: 25px;
             height: 3px;
-            background-color: var(--text-color);
+            background-color: var(--text-light);
             margin: 3px 0;
             transition: 0.3s;
         }
@@ -60,13 +60,14 @@ function initMobileMenu() {
                 right: -100%;
                 width: 100%;
                 height: calc(100vh - 70px);
-                background: white;
+                background: var(--bg-color);
                 flex-direction: column;
                 justify-content: start;
                 align-items: center;
                 padding-top: 2rem;
                 transition: 0.3s;
                 box-shadow: var(--shadow);
+                border-top: 1px solid var(--border-color);
             }
             
             .nav-menu.active {

@@ -19,15 +19,18 @@ body {
 
 /* CSS Variables */
 :root {
-    --primary-color: #8b5cf6;
-    --primary-dark: #7c3aed;
-    --secondary-color: #a78bfa;
-    --accent-color: #c084fc;
+    --primary-color: #a78bfa;
+    --primary-dark: #8b5cf6;
+    --secondary-color: #c084fc;
+    --accent-color: #ddd6fe;
     --bg-color: #0f0f23;
     --bg-secondary: #1a1a2e;
     --bg-card: #16213e;
-    --text-color: #e2e8f0;
-    --text-light: #94a3b8;
+    --text-color: #f1f5f9;
+    --text-light: #cbd5e1;
+    --text-muted: #94a3b8;
+    --link-color: #c084fc;
+    --link-hover: #ddd6fe;
     --border-color: #334155;
     --shadow: 0 4px 6px -1px rgb(139 92 246 / 0.1), 0 2px 4px -2px rgb(139 92 246 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(139 92 246 / 0.2), 0 4px 6px -4px rgb(139 92 246 / 0.1);
@@ -63,6 +66,21 @@ h3 {
 
 p {
     margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a:visited {
+    color: var(--secondary-color);
 }
 
 /* Header and Navigation */
@@ -146,24 +164,25 @@ header {
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--link-color);
+    border: 2px solid var(--link-color);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
-    color: white;
+    background: var(--link-color);
+    color: var(--bg-color);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--text-color);
+    color: var(--text-light);
     border: 2px solid var(--border-color);
 }
 
 .btn-outline:hover {
-    background: var(--text-color);
-    color: white;
+    background: var(--text-light);
+    color: var(--bg-color);
+    border-color: var(--text-light);
 }
 
 .btn-small {
@@ -210,6 +229,7 @@ header {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: var(--text-light);
+    line-height: 1.7;
 }
 
 .hero-buttons {
@@ -507,19 +527,21 @@ header {
 
 .filter-btn {
     padding: 0.75rem 1.5rem;
-    background: transparent;
+    background: var(--bg-card);
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
+    color: var(--text-light);
 }
 
 .filter-btn.active,
 .filter-btn:hover {
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-color);
     border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .projects-grid-section {
@@ -695,9 +717,14 @@ header {
 }
 
 .contact-details a {
-    color: var(--primary-color);
+    color: var(--link-color);
     text-decoration: none;
     font-weight: 500;
+}
+
+.contact-details a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 .availability {
@@ -851,13 +878,13 @@ footer .container {
 }
 
 .social-links a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    color: var(--primary-color);
+    color: var(--link-hover);
 }
 
 /* Responsive Design */
