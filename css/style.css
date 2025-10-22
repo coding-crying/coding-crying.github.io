@@ -154,37 +154,49 @@ header {
 
 .btn-primary {
     background: var(--primary-color);
-    color: white;
+    color: white !important;
     font-weight: 600;
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
-    color: white;
+    color: white !important;
     transform: translateY(-2px);
+}
+
+.btn-primary:visited {
+    color: white !important;
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--link-color);
+    color: var(--link-color) !important;
     border: 2px solid var(--link-color);
 }
 
 .btn-secondary:hover {
     background: var(--link-color);
-    color: var(--bg-color);
+    color: var(--bg-color) !important;
+}
+
+.btn-secondary:visited {
+    color: var(--link-color) !important;
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--text-light);
+    color: var(--text-light) !important;
     border: 2px solid var(--border-color);
 }
 
 .btn-outline:hover {
     background: var(--text-light);
-    color: var(--bg-color);
+    color: var(--bg-color) !important;
     border-color: var(--text-light);
+}
+
+.btn-outline:visited {
+    color: var(--text-light) !important;
 }
 
 .btn-small {
