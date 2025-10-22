@@ -139,10 +139,10 @@ function initProjectFiltering() {
             
             projectCards.forEach(card => {
                 if (filter === 'all' || card.dataset.category === filter) {
-                    card.style.display = 'block';
+                    card.classList.remove('filtered-out');
                     card.style.animation = 'fadeIn 0.5s ease-in';
                 } else {
-                    card.style.display = 'none';
+                    card.classList.add('filtered-out');
                 }
             });
         });

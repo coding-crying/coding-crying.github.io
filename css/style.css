@@ -269,6 +269,8 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    align-items: stretch;
+    grid-auto-flow: dense;
 }
 
 .project-card {
@@ -278,6 +280,7 @@ header {
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid var(--border-color);
+    height: 100%;
 }
 
 .project-card:hover {
@@ -293,6 +296,12 @@ header {
 
 .project-info {
     padding: 1.5rem;
+}
+
+.project-card:not(.featured) .project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-info h3 {
@@ -557,6 +566,11 @@ header {
     gap: 0;
 }
 
+.project-card:not(.featured) {
+    display: flex;
+    flex-direction: column;
+}
+
 .project-image {
     position: relative;
     overflow: hidden;
@@ -616,6 +630,17 @@ header {
     color: var(--bg-color);
 }
 
+.ad-engine-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
@@ -662,6 +687,35 @@ header {
 
 .project-features {
     margin-top: 1rem;
+}
+
+.project-card:not(.featured) .project-features {
+    flex: 1;
+}
+
+.project-card.filtered-out {
+    display: none;
+}
+
+/* Prevent content overflow in cards */
+.project-card {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.project-info {
+    min-height: 0;
+    overflow: auto;
+}
+
+.project-features ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.project-features li {
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
 }
 
 .project-features h4 {
