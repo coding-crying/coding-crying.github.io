@@ -44,14 +44,20 @@
                         </p>
                         
                         <div class="contact-methods">
+                            <div class="bot-protection">
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                                    🔒 Contact information is protected against automated scraping
+                                </p>
+                            </div>
+                            
                             <div class="contact-method">
                                 <div class="contact-icon">
                                     <span>📧</span>
                                 </div>
                                 <div class="contact-details">
                                     <h3>Email</h3>
-                                    <p>willghermann@protonmail.com</p>
-                                    <a href="mailto:willghermann@protonmail.com">Send Email</a>
+                                    <p data-email="true">[Click to reveal email]</p>
+                                    <a href="#" data-email-link="true" onclick="revealEmail(event)">Show Email Address</a>
                                 </div>
                             </div>
                             
@@ -72,8 +78,8 @@
                                 </div>
                                 <div class="contact-details">
                                     <h3>Phone</h3>
-                                    <p>+31 06 13204872</p>
-                                    <a href="tel:+31613204872">Call/Text/Signal</a>
+                                    <p data-phone="true">[Click to reveal phone]</p>
+                                    <a href="#" data-phone-link="true" onclick="revealPhone(event)">Show Phone Number</a>
                                 </div>
                             </div>
                         </div>

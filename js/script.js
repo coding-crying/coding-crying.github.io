@@ -382,3 +382,159 @@ function initLazyLoading() {
 
 // Initialize lazy loading if images have data-src attributes
 initLazyLoading();
+
+// Contact information protection
+function revealEmail(event) {
+    event.preventDefault();
+    const emailElement = document.querySelector('[data-email="true"]');
+    const linkElement = document.querySelector('[data-email-link="true"]');
+    
+    if (emailElement && emailElement.textContent === '[Click to reveal email]') {
+        // Obfuscated email
+        const user = 'willghermann';
+        const domain = 'protonmail.com';
+        const email = `${user}@${domain}`;
+        
+        emailElement.textContent = email;
+        linkElement.href = `mailto:${email}`;
+        linkElement.textContent = 'Send Email';
+        
+        // Add subtle animation
+        emailElement.style.opacity = '0';
+        setTimeout(() => {
+            emailElement.style.transition = 'opacity 0.5s ease';
+            emailElement.style.opacity = '1';
+        }, 100);
+    }
+}
+
+function revealPhone(event) {
+    event.preventDefault();
+    const phoneElement = document.querySelector('[data-phone="true"]');
+    const linkElement = document.querySelector('[data-phone-link="true"]');
+    
+    if (phoneElement && phoneElement.textContent === '[Click to reveal phone]') {
+        // Obfuscated phone
+        const phone = '+31 06 13204872';
+        const telLink = 'tel:+31613204872';
+        
+        phoneElement.textContent = phone;
+        linkElement.href = telLink;
+        linkElement.textContent = 'Call/Text/Signal';
+        
+        // Add subtle animation
+        phoneElement.style.opacity = '0';
+        setTimeout(() => {
+            phoneElement.style.transition = 'opacity 0.5s ease';
+            phoneElement.style.opacity = '1';
+        }, 100);
+    }
+}
+
+// Add honeypot field for form spam protection
+function addHoneypot() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        const honeypot = document.createElement('input');
+        honeypot.type = 'text';
+        honeypot.name = 'website';
+        honeypot.style.display = 'none';
+        honeypot.tabIndex = -1;
+        honeypot.autocomplete = 'off';
+        form.appendChild(honeypot);
+    }
+}
+
+// Initialize honeypot
+addHoneypot();
+
+// Bot detection and rate limiting
+let revealAttempts = 0;
+const MAX_ATTEMPTS = 5;
+
+function checkBotActivity() {
+    revealAttempts++;
+    if (revealAttempts > MAX_ATTEMPTS) {
+        // Potential bot activity detected
+        document.body.innerHTML = '<div style="text-align: center; padding: 2rem;"><h2>Access Restricted</h2><p>Too many requests detected. Please try again later.</p></div>';
+        return false;
+    }
+    return true;
+}
+
+// Enhanced reveal functions with bot detection
+function revealEmail(event) {
+    if (!checkBotActivity()) return;
+    event.preventDefault();
+    const emailElement = document.querySelector('[data-email="true"]');
+    const linkElement = document.querySelector('[data-email-link="true"]');
+    
+    if (emailElement && emailElement.textContent === '[Click to reveal email]') {
+        // Obfuscated email
+        const user = 'willghermann';
+        const domain = 'protonmail.com';
+        const email = `${user}@${domain}`;
+        
+        emailElement.textContent = email;
+        linkElement.href = `mailto:${email}`;
+        linkElement.textContent = 'Send Email';
+        
+        // Add subtle animation
+        emailElement.style.opacity = '0';
+        setTimeout(() => {
+            emailElement.style.transition = 'opacity 0.5s ease';
+            emailElement.style.opacity = '1';
+        }, 100);
+    }
+}
+
+function revealPhone(event) {
+    if (!checkBotActivity()) return;
+    event.preventDefault();
+    const phoneElement = document.querySelector('[data-phone="true"]');
+    const linkElement = document.querySelector('[data-phone-link="true"]');
+    
+    if (phoneElement && phoneElement.textContent === '[Click to reveal phone]') {
+        // Obfuscated phone
+        const phone = '+31 06 13204872';
+        const telLink = 'tel:+31613204872';
+        
+        phoneElement.textContent = phone;
+        linkElement.href = telLink;
+        linkElement.textContent = 'Call/Text/Signal';
+        
+        // Add subtle animation
+        phoneElement.style.opacity = '0';
+        setTimeout(() => {
+            phoneElement.style.transition = 'opacity 0.5s ease';
+            phoneElement.style.opacity = '1';
+        }, 100);
+    }
+}
+
+// Form submission protection
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const honeypot = form.querySelector('input[name="website"]');
+            if (honeypot && honeypot.value) {
+                // Honeypot filled - likely a bot
+                e.preventDefault();
+                return false;
+            }
+            
+            // Check form submission time (bots submit too fast)
+            const formStartTime = form.dataset.startTime || Date.now();
+            const timeDiff = Date.now() - formStartTime;
+            if (timeDiff < 3000) { // Less than 3 seconds
+                e.preventDefault();
+                alert('Please slow down and try again.');
+                return false;
+            }
+        });
+        
+        // Record form load time
+        form.dataset.startTime = Date.now();
+    }
+});

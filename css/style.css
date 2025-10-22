@@ -965,6 +965,42 @@ header {
     padding: 4rem 0;
 }
 
+/* Anti-scraping measures */
+[data-email="true"], [data-phone="true"] {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+[data-email="true"]:hover, [data-phone="true"]:hover {
+    color: var(--primary-color);
+}
+
+[data-email-link="true"], [data-phone-link="true"] {
+    position: relative;
+}
+
+/* Honeypot field - hidden from humans but visible to bots */
+input[name="website"] {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+/* Bot detection patterns */
+.bot-protection {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Additional email obfuscation */
+.email-obfuscated::before {
+    content: attr(data-user) "@" attr(data-domain);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
 .location-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
