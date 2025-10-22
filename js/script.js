@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form handling
     initContactForm();
     
-    // Skill bar animations
-    initSkillBars();
+    // Skill bar animations removed for professional appearance
     
     // Scroll animations
     initScrollAnimations();
@@ -210,35 +209,7 @@ function initContactForm() {
     });
 }
 
-// Skill bar animations
-function initSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    if (skillBars.length === 0) return;
-    
-    const animateSkillBars = () => {
-        skillBars.forEach(bar => {
-            const rect = bar.getBoundingClientRect();
-            const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-            
-            if (isVisible && !bar.classList.contains('animated')) {
-                bar.classList.add('animated');
-                const width = bar.dataset.width;
-                bar.style.width = '0%';
-                
-                setTimeout(() => {
-                    bar.style.transition = 'width 2s ease-out';
-                    bar.style.width = width;
-                }, 100);
-            }
-        });
-    };
-    
-    // Check on scroll
-    window.addEventListener('scroll', animateSkillBars);
-    // Check on load
-    animateSkillBars();
-}
+// Skill bar animations removed for professional appearance
 
 // Scroll animations
 function initScrollAnimations() {
