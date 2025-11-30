@@ -131,10 +131,10 @@ header.scrolled {
 
 /* --- HERO --- */
 .hero { 
-    min-height: 70vh; /* Reduced from 90vh */
+    min-height: 60vh; /* Reduced further */
     display: flex; 
     align-items: center; 
-    padding: 8rem 0 4rem 0; /* Adjusted padding: more top to clear header, less bottom */
+    padding: 6rem 0 2rem 0; /* Reduced top padding significantly */
 }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
 .hero-label { font-family: var(--font-code); color: var(--accent-glow); display: block; margin-bottom: 1rem; font-size: 0.85rem; }
