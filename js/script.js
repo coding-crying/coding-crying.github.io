@@ -1,540 +1,149 @@
-// Portfolio JavaScript functionality
+/**
+ * The Midnight Archive - Interaction Engine
+ * Handles custom cursor, image previews, and scroll animations.
+ */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    initMobileMenu();
-    
-    // Smooth scrolling for anchor links
-    initSmoothScrolling();
-    
-    // Project filtering (for projects page)
-    initProjectFiltering();
-    
-    // Contact form handling
+document.addEventListener('DOMContentLoaded', () => {
+    initCursor();
+    initImagePreview();
+    initHeaderScroll();
     initContactForm();
-    
-    // Skill bar animations removed for professional appearance
-    
-    // Scroll animations
-    initScrollAnimations();
+    initMobileMenu(); // Kept for structure, though CSS handles most
 });
 
-// Mobile menu functionality
-function initMobileMenu() {
-    const nav = document.querySelector('.nav-menu');
-    const burger = document.createElement('div');
-    burger.classList.add('burger');
-    burger.innerHTML = `
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    `;
-    
-    // Add burger menu styles
-    const style = document.createElement('style');
-    style.textContent = `
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-light);
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-        
-        @media (max-width: 768px) {
-            .burger {
-                display: flex;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--bg-color);
-                flex-direction: column;
-                justify-content: start;
-                align-items: center;
-                padding-top: 2rem;
-                transition: 0.3s;
-                box-shadow: var(--shadow);
-                border-top: 1px solid var(--border-color);
-            }
-            
-            .nav-menu.active {
-                right: 0;
-            }
-            
-            .burger.active .line1 {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-            
-            .burger.active .line2 {
-                opacity: 0;
-            }
-            
-            .burger.active .line3 {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-        }
-    `;
-    
-    document.head.appendChild(style);
-    document.querySelector('.nav-container').appendChild(burger);
-    
-    burger.addEventListener('click', function() {
-        nav.classList.toggle('active');
-        burger.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            burger.classList.remove('active');
-        });
-    });
-}
-
-// Smooth scrolling for anchor links
-function initSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
-
-// Project filtering functionality
-function initProjectFiltering() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    if (filterButtons.length === 0) return;
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            const filter = this.dataset.filter;
-            
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.classList.remove('filtered-out');
-                    card.style.animation = 'fadeIn 0.5s ease-in';
-                } else {
-                    card.classList.add('filtered-out');
-                }
-            });
-        });
-    });
-    
-    // Add fade-in animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// Contact form handling
+/**
+ * Contact Form Handler (Frontend Simulation)
+ */
 function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    
-    if (!contactForm) return;
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const formValues = Object.fromEntries(formData);
-        
-        // Basic validation
-        if (!formValues.name || !formValues.email || !formValues.message) {
-            alert('Please fill in all required fields.');
-            return;
-        }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formValues.email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-        
-        // Simulate form submission
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        
-        // Simulate API call delay
-        setTimeout(() => {
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
-            
-            // Reset form after showing success message
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.textContent;
+
+            // Simulate network request
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
             setTimeout(() => {
-                contactForm.reset();
-                contactForm.style.display = 'block';
-                formSuccess.style.display = 'none';
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 5000);
-        }, 2000);
-    });
-}
-
-// Skill bar animations removed for professional appearance
-
-// Scroll animations
-function initScrollAnimations() {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+                btn.textContent = 'Sent!';
+                status.style.display = 'block';
+                status.textContent = 'Message sent! Thanks for reaching out.';
+                form.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    status.style.display = 'none';
+                }, 5000);
+            }, 1000);
         });
-    }, observerOptions);
-    
-    // Elements to animate on scroll
-    const animatedElements = document.querySelectorAll(`
-        .project-card,
-        .skill-category,
-        .timeline-item,
-        .cert-item,
-        .stat-item,
-        .faq-item,
-        .contact-method
-    `);
-    
-    animatedElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(el);
-    });
-}
-
-// Utility function to debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Add scroll to top functionality
-function addScrollToTop() {
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.classList.add('scroll-to-top');
-    
-    const style = document.createElement('style');
-    style.textContent = `
-        .scroll-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .scroll-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .scroll-to-top:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-    `;
-    
-    document.head.appendChild(style);
-    document.body.appendChild(scrollToTopBtn);
-    
-    // Show/hide button based on scroll position
-    const toggleScrollButton = debounce(() => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    }, 100);
-    
-    window.addEventListener('scroll', toggleScrollButton);
-    
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// Initialize scroll to top button
-addScrollToTop();
-
-// Add loading animation
-window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    
-    const style = document.createElement('style');
-    style.textContent = `
-        body {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        body.loaded {
-            opacity: 1;
-        }
-    `;
-    
-    document.head.appendChild(style);
-});
-
-// Keyboard navigation support
-document.addEventListener('keydown', function(e) {
-    // Close mobile menu with Escape key
-    if (e.key === 'Escape') {
-        const nav = document.querySelector('.nav-menu');
-        const burger = document.querySelector('.burger');
-        if (nav && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            burger.classList.remove('active');
-        }
     }
-});
+}
 
-// Performance optimization: Lazy load images
-function initLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
+/**
+ * Custom Cursor Logic
+ * Creates a lagging follower effect for smooth feel.
+ */
+function initCursor() {
+    const dot = document.querySelector('.cursor-dot');
+    const outline = document.querySelector('.cursor-outline');
     
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
+    // Only activate on desktop
+    if (window.matchMedia("(pointer: fine)").matches) {
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Dot follows instantly
+            dot.style.left = `${posX}px`;
+            dot.style.top = `${posY}px`;
+
+            // Outline follows with lag (via CSS transition or animation frame)
+            // For performance, we use simple CSS transitions defined in style.css
+            outline.style.left = `${posX}px`;
+            outline.style.top = `${posY}px`;
+        });
+
+        // Hover effects for interactive elements
+        const interactables = document.querySelectorAll('a, button, .bento-card, .stream-item');
+        
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                document.body.classList.add('hovering');
+            });
+            el.addEventListener('mouseleave', () => {
+                document.body.classList.remove('hovering');
             });
         });
-        
-        images.forEach(img => imageObserver.observe(img));
-    } else {
-        // Fallback for older browsers
-        images.forEach(img => {
-            img.src = img.dataset.src;
-        });
     }
 }
 
-// Initialize lazy loading if images have data-src attributes
-initLazyLoading();
+/**
+ * Floating Image Preview (Project Stream)
+ * Shows image near cursor when hovering project list items.
+ */
+function initImagePreview() {
+    const streamItems = document.querySelectorAll('.stream-item');
+    const previewBox = document.querySelector('.hover-reveal');
 
-// Contact information protection
-function revealEmail(event) {
-    event.preventDefault();
-    const emailElement = document.querySelector('[data-email="true"]');
-    const linkElement = document.querySelector('[data-email-link="true"]');
-    
-    if (emailElement && emailElement.textContent === '[Click to reveal email]') {
-        // Obfuscated email
-        const user = 'willghermann';
-        const domain = 'protonmail.com';
-        const email = `${user}@${domain}`;
-        
-        emailElement.textContent = email;
-        linkElement.href = `mailto:${email}`;
-        linkElement.textContent = 'Send Email';
-        
-        // Add subtle animation
-        emailElement.style.opacity = '0';
-        setTimeout(() => {
-            emailElement.style.transition = 'opacity 0.5s ease';
-            emailElement.style.opacity = '1';
-        }, 100);
-    }
-}
+    if (!streamItems.length || !previewBox) return;
 
-function revealPhone(event) {
-    event.preventDefault();
-    const phoneElement = document.querySelector('[data-phone="true"]');
-    const linkElement = document.querySelector('[data-phone-link="true"]');
-    
-    if (phoneElement && phoneElement.textContent === '[Click to reveal phone]') {
-        // Obfuscated phone
-        const phone = '+31 06 13204872';
-        const telLink = 'tel:+31613204872';
-        
-        phoneElement.textContent = phone;
-        linkElement.href = telLink;
-        linkElement.textContent = 'Call/Text/Signal';
-        
-        // Add subtle animation
-        phoneElement.style.opacity = '0';
-        setTimeout(() => {
-            phoneElement.style.transition = 'opacity 0.5s ease';
-            phoneElement.style.opacity = '1';
-        }, 100);
-    }
-}
-
-// Add honeypot field for form spam protection
-function addHoneypot() {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        const honeypot = document.createElement('input');
-        honeypot.type = 'text';
-        honeypot.name = 'website';
-        honeypot.style.display = 'none';
-        honeypot.tabIndex = -1;
-        honeypot.autocomplete = 'off';
-        form.appendChild(honeypot);
-    }
-}
-
-// Initialize honeypot
-addHoneypot();
-
-// Bot detection and rate limiting
-let revealAttempts = 0;
-const MAX_ATTEMPTS = 5;
-
-function checkBotActivity() {
-    revealAttempts++;
-    if (revealAttempts > MAX_ATTEMPTS) {
-        // Potential bot activity detected
-        document.body.innerHTML = '<div style="text-align: center; padding: 2rem;"><h2>Access Restricted</h2><p>Too many requests detected. Please try again later.</p></div>';
-        return false;
-    }
-    return true;
-}
-
-// Enhanced reveal functions with bot detection
-function revealEmail(event) {
-    if (!checkBotActivity()) return;
-    event.preventDefault();
-    const emailElement = document.querySelector('[data-email="true"]');
-    const linkElement = document.querySelector('[data-email-link="true"]');
-    
-    if (emailElement && emailElement.textContent === '[Click to reveal email]') {
-        // Obfuscated email
-        const user = 'willghermann';
-        const domain = 'protonmail.com';
-        const email = `${user}@${domain}`;
-        
-        emailElement.textContent = email;
-        linkElement.href = `mailto:${email}`;
-        linkElement.textContent = 'Send Email';
-        
-        // Add subtle animation
-        emailElement.style.opacity = '0';
-        setTimeout(() => {
-            emailElement.style.transition = 'opacity 0.5s ease';
-            emailElement.style.opacity = '1';
-        }, 100);
-    }
-}
-
-function revealPhone(event) {
-    if (!checkBotActivity()) return;
-    event.preventDefault();
-    const phoneElement = document.querySelector('[data-phone="true"]');
-    const linkElement = document.querySelector('[data-phone-link="true"]');
-    
-    if (phoneElement && phoneElement.textContent === '[Click to reveal phone]') {
-        // Obfuscated phone
-        const phone = '+31 06 13204872';
-        const telLink = 'tel:+31613204872';
-        
-        phoneElement.textContent = phone;
-        linkElement.href = telLink;
-        linkElement.textContent = 'Call/Text/Signal';
-        
-        // Add subtle animation
-        phoneElement.style.opacity = '0';
-        setTimeout(() => {
-            phoneElement.style.transition = 'opacity 0.5s ease';
-            phoneElement.style.opacity = '1';
-        }, 100);
-    }
-}
-
-// Form submission protection
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            const honeypot = form.querySelector('input[name="website"]');
-            if (honeypot && honeypot.value) {
-                // Honeypot filled - likely a bot
-                e.preventDefault();
-                return false;
+    streamItems.forEach(item => {
+        item.addEventListener('mouseenter', (e) => {
+            const imgUrl = item.getAttribute('data-image');
+            if (imgUrl) {
+                previewBox.style.backgroundImage = `url(${imgUrl})`;
+                previewBox.classList.add('active');
+                
+                // Check if the image is the specific flower one
+                if (imgUrl.includes('flwr-head')) {
+                    previewBox.classList.add('mini-preview');
+                } else {
+                    previewBox.classList.remove('mini-preview');
+                }
             }
+        });
+
+        item.addEventListener('mousemove', (e) => {
+            // Offset image from cursor to not block text
+            const x = e.clientX + 50;
+            const y = e.clientY - 100;
             
-            // Check form submission time (bots submit too fast)
-            const formStartTime = form.dataset.startTime || Date.now();
-            const timeDiff = Date.now() - formStartTime;
-            if (timeDiff < 3000) { // Less than 3 seconds
-                e.preventDefault();
-                alert('Please slow down and try again.');
-                return false;
-            }
+            previewBox.style.left = `${x}px`;
+            previewBox.style.top = `${y}px`;
         });
-        
-        // Record form load time
-        form.dataset.startTime = Date.now();
-    }
-});
+
+        item.addEventListener('mouseleave', () => {
+            previewBox.classList.remove('active');
+            previewBox.classList.remove('mini-preview'); // Clean up
+        });
+    });
+}
+
+/**
+ * Header Glass Effect
+ */
+function initHeaderScroll() {
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
+/**
+ * Mobile Menu Placeholder
+ * (Expandable in future)
+ */
+function initMobileMenu() {
+    // Logic for mobile menu toggle if needed
+}

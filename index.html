@@ -3,142 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will Hermann - Portfolio</title>
+    <title>Will Hermann | AI Architect</title>
+    <meta name="description" content="Portfolio of Will Hermann - AI Researcher and Engineer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Background Network Animation -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <!-- Image Preview Container -->
+    <div class="hover-reveal"></div>
+
     <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h2>Will Hermann</h2>
-                </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">Will Hermann</a>
+            </div>
+            <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Will Hermann</span></h1>
-                    <p class="hero-subtitle">AI Researcher • Entrepreneur • Designer • Engineer</p>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-label">// RESEARCH & DEVELOPMENT</span>
+                    <h1>
+                        Building intelligent,<br>
+                        decentralized systems<br>
+                        for a sovereign web.
+                    </h1>
                     <p class="hero-description">
-                        I architect and develop RAG-enhanced LLM applications, conversational AI interfaces, 
-                        and intelligent agentic systems. As an entrepreneur, I've built tech consulting 
-                        businesses and designed innovative products. I hold a BSc in Artificial Intelligence 
-                        from University of Groningen.
+                        I'm an AI Architect and Researcher passionate about privacy and user sovereignty. 
+                        I bridge the gap between cognitive science and scalable software engineering.
                     </p>
                     <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary">View My Work</a>
-                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                        <a href="projects.html" class="btn btn-primary">See My Work</a>
+                        <a href="about.html" class="btn btn-outline">More About Me</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/profile.jpg" alt="Will Hermann" class="profile-img">
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-projects">
-            <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="images/neo4j.jpg" alt="Neo4j Language Learning Tutor">
-                        <div class="project-info">
-                            <h3>Neo4j Language Learning Tutor</h3>
-                            <p>AI-powered conversational language tutor with RAG-enhanced memory modeling, Neo4j graph database, and real-time voice interaction</p>
-                            <div class="project-links">
-                                <a href="https://github.com/coding-crying/realtime-agents-language-tutor" class="btn btn-small" target="_blank">GitHub</a>
-                                <a href="projects.html" class="btn btn-small btn-outline">View Details</a>
-                            </div>
-                        </div>
+                <div class="hero-visual">
+                    <div class="profile-glitch-wrapper">
+                         <img src="images/profile.jpg" alt="Will Hermann" class="hero-profile-img">
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-placeholder">
-                            <div class="placeholder-content">
-                                <h4>Flower.ai</h4>
-                                <p>Federated Learning</p>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Federated ActivityPub Recommendation System</h3>
-                            <p>Privacy-preserving federated learning for decentralized social media recommendations</p>
-                            <div class="project-links">
-                                <a href="https://github.com/coding-crying/federated-activitypub-recommendations" class="btn btn-small" target="_blank">GitHub</a>
-                                <a href="https://flower.ai/docs/framework/" class="btn btn-small btn-outline" target="_blank">Docs</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <img src="images/hoody-robot.jpg" alt="Hoody Social Robot">
-                        <div class="project-info">
-                            <h3>Hoody - Intelligent Kitchen Assistant</h3>
-                            <p>Research project: AI-powered social robot for advanced culinary assistance</p>
-                            <div class="project-links">
-                                <a href="docs/social-robotics-report.pdf" class="btn btn-small" target="_blank">View Report</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="view-all">
-                    <a href="projects.html" class="btn btn-outline">View All Projects</a>
                 </div>
             </div>
         </section>
 
-        <section class="skills-preview">
+        <!-- SKILLS MARQUEE (The Infinity Stream) -->
+        <section class="skills-marquee">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>PYTHON</span><span>TYPESCRIPT</span><span>REACT</span><span>NODE.JS</span><span>NEO4J</span><span>DOCKER</span><span>LINUX</span><span>AWS</span><span>POSTGRESQL</span><span>DJANGO</span><span>FASTAPI</span><span>SQL</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span>PYTHON</span><span>TYPESCRIPT</span><span>REACT</span><span>NODE.JS</span><span>NEO4J</span><span>DOCKER</span><span>LINUX</span><span>AWS</span><span>POSTGRESQL</span><span>DJANGO</span><span>FASTAPI</span><span>SQL</span>
+                </div>
+            </div>
+            <div class="marquee-track reverse">
+                <div class="marquee-content">
+                    <span>LLMs</span><span>LANGCHAIN</span><span>PYTORCH</span><span>HUGGING FACE</span><span>OPENAI</span><span>RAG</span><span>NLP</span><span>COMPUTER VISION</span><span>SYSTEM ARCHITECTURE</span><span>API DESIGN</span><span>AI AGENTS</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span>LLMs</span><span>LANGCHAIN</span><span>PYTORCH</span><span>HUGGING FACE</span><span>OPENAI</span><span>RAG</span><span>NLP</span><span>COMPUTER VISION</span><span>SYSTEM ARCHITECTURE</span><span>API DESIGN</span><span>AI AGENTS</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
             <div class="container">
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>AI & Machine Learning</h3>
-                        <ul>
-                            <li>Python / TensorFlow</li>
-                            <li>Scikit-learn / NumPy</li>
-                            <li>AI Agentic Architecting</li>
-                            <li>Computer Vision / NLP</li>
-                            <li>Docker / Linux Systems</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Design & Prototyping</h3>
-                        <ul>
-                            <li>SolidWorks CAD</li>
-                            <li>3D Printing / Laser Cutting</li>
-                            <li>Rapid Prototyping</li>
-                            <li>Product Design</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Business & Consulting</h3>
-                        <ul>
-                            <li>Tech Consulting</li>
-                            <li>Client Relations</li>
-                            <li>Patent Consultation</li>
-                            <li>Cybersecurity Advisory</li>
-                        </ul>
-                    </div>
+                <div class="section-header">
+                    <h2>Selected Projects</h2>
+                    <a href="projects.html" class="view-all-link">View Archive &rarr;</a>
+                </div>
+                
+                <div class="project-stream">
+                    
+                    <!-- Item 01 -->
+                    <a href="projects.html" class="stream-item" data-image="images/neo4j.jpg">
+                        <span class="stream-index">01</span>
+                        <span class="stream-title">Neo4j Language Tutor</span>
+                        <div class="stream-tags">
+                            <span class="tag">AI Agents</span>
+                            <span class="tag">Voice</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 02 -->
+                    <a href="projects.html" class="stream-item" data-image="images/hoody-robot.jpg">
+                        <span class="stream-index">02</span>
+                        <span class="stream-title">Hoody Robotics</span>
+                        <div class="stream-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 03 -->
+                    <a href="projects.html" class="stream-item" data-image="images/flwr-head.avif">
+                        <span class="stream-index">03</span>
+                        <span class="stream-title">Federated Learning</span>
+                        <div class="stream-tags">
+                            <span class="tag">Privacy</span>
+                            <span class="tag">PyTorch</span>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Will Hermann. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/coding-crying" aria-label="GitHub" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/william-hermann" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Will Hermann</h4>
+                <p style="font-size: 0.9rem; max-width: 300px;">
+                    AI Architect & Researcher building the decentralized future.
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-links">
+                    <a href="mailto:willghermann@protonmail.com">willghermann@protonmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Network</h4>
+                <div class="footer-links">
+                    <a href="https://github.com/coding-crying" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/william-hermann" target="_blank">LinkedIn</a>
+                </div>
             </div>
         </div>
     </footer>

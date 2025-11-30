@@ -3,251 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Will Hermann</title>
+    <title>Profile | Will Hermann</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=editorial-new@400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h2>Will Hermann</h2>
-                </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">WILL HERMANN_</a>
+            </div>
+            <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="projects.html">Archive</a></li>
+                    <li><a href="about.html" class="active">Profile</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="about-hero">
+        <section class="section">
             <div class="container">
-                <h1>About Me</h1>
-                <p class="subtitle">AI Researcher, Entrepreneur, and Innovator bridging technology and real-world impact</p>
-            </div>
-        </section>
-
-        <section class="about-content">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h2>Who Am I?</h2>
-                        <p>
-                            I'm an AI architect and researcher with a BSc in Artificial Intelligence 
-                            from the University of Groningen, specializing in building decentralized, 
-                            privacy-preserving AI systems. I'm passionate about challenging big tech monopolies 
-                            by creating open-source alternatives that put users back in control of their data 
-                            and digital experiences.
-                        </p>
-                        <p>
-                            My recent work demonstrates this commitment: I developed a comprehensive Neo4j-powered 
-                            language tutoring platform featuring real-time voice interaction and intelligent memory 
-                            modeling, built a federated learning system for privacy-preserving social media recommendations, 
-                            and created local advertisement content generation pipelines that operate entirely offline. 
-                            Each project represents a step toward AI decentralization and user sovereignty.
-                        </p>
-                        <p>
-                            Beyond AI development, I bring diverse technical experience from cognitive modeling 
-                            research using ACT-R architecture to hardware innovation holding U.S. Patent #11,220,244 
-                            for recreational device braking systems. My background includes founding tech consulting 
-                            businesses, product design with rapid prototyping, and three years of international 
-                            experience living and studying in Europe.
-                        </p>
-                        <p>
-                            I believe the future of AI lies in transparent, user-controlled systems that enhance 
-                            human capabilities rather than replace them. Whether through federated learning, local 
-                            deployment, or open-source development, I'm committed to building technology that serves 
-                            humanity's interests while maintaining individual privacy and autonomy.
-                        </p>
-                        
-                        <div class="resume-download">
-                            <a href="Will Hermann CV.pdf" class="btn btn-primary" target="_blank">
-                                Download Resume
-                            </a>
-                        </div>
-                    </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;">
                     
-                    <div class="about-image">
-                        <img src="images/about-me.jpg" alt="About me photo">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="skills-detailed">
-            <div class="container">
-                <h2>Technical Skills</h2>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>AI & Machine Learning</h4>
-                        <ul>
-                            <li>Python / TensorFlow / PyTorch</li>
-                            <li>Scikit-learn / NumPy / Pandas</li>
-                            <li>AI Agentic Architecting</li>
-                            <li>Computer Vision / NLP</li>
-                            <li>Research & Publication</li>
-                            <li>Neo4j Graph Databases</li>
-                            <li>RAG Systems Development</li>
-                        </ul>
+                    <!-- Left: Bio -->
+                    <div>
+                        <h1 style="margin-bottom: 3rem;">Profile_</h1>
+                        <p style="margin-bottom: 2rem; font-size: 1.25rem; color: var(--text-lumen);">
+                            I am an AI architect and researcher specializing in decentralized systems. 
+                            My work focuses on challenging big tech monopolies by building open-source 
+                            alternatives that restore user sovereignty.
+                        </p>
+                        <p style="margin-bottom: 2rem;">
+                            With a BSc in Artificial Intelligence from the University of Groningen, I combine academic rigor with entrepreneurial drive. 
+                            My expertise spans from cognitive modeling (ACT-R) to full-stack engineering (RAG, Neo4j) and hardware innovation.
+                        </p>
+                        <a href="Will Hermann CV.pdf" class="btn btn-primary" target="_blank">Download CV</a>
                     </div>
 
-                    <div class="skill-category">
-                        <h4>Web Development</h4>
-                        <ul>
-                            <li>Next.js / React / TypeScript</li>
-                            <li>Node.js / FastAPI</li>
-                            <li>WebRTC / Real-time Communication</li>
-                            <li>Docker / Containerization</li>
-                            <li>Redis / Caching Systems</li>
-                            <li>RESTful API Design</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Design & Engineering</h4>
-                        <ul>
-                            <li>SolidWorks CAD Design</li>
-                            <li>3D Printing / Laser Cutting</li>
-                            <li>Rapid Prototyping</li>
-                            <li>Product Design & Innovation</li>
-                            <li>Patent Design & Documentation</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Business & Consulting</h4>
-                        <ul>
-                            <li>Tech Consulting & Support</li>
-                            <li>Client Relations & Communication</li>
-                            <li>Patent Consultation</li>
-                            <li>Cybersecurity Advisory</li>
-                            <li>Project Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="education-experience">
-            <div class="container">
-                <div class="edu-exp-grid">
-                    <div class="education">
-                        <h2>Education</h2>
-                        <div class="timeline-item">
-                            <h3>BSc in Artificial Intelligence</h3>
-                            <p class="institution">Rijksuniversiteit Groningen</p>
-                            <p class="date">2022 - 2025 (Graduated)</p>
-                            <p class="description">
-                                Comprehensive study of machine learning, neural networks, 
-                                cognitive science, and AI ethics. Completed thesis on agent-based 
-                                conversational language tutoring systems.
-                            </p>
-                        </div>
+                    <!-- Right: Timeline -->
+                    <div class="timeline-section">
+                        <span class="hero-label" style="margin-bottom: 2rem; display: block;">// EXPERIENCE LOG</span>
                         
                         <div class="timeline-item">
-                            <h3>Dual Enrollment</h3>
-                            <p class="institution">Foothill College</p>
-                            <p class="date">2017 - 2019, 2022</p>
-                            <p class="description">
-                                Advanced coursework in mathematics, computer science, 
-                                and engineering while completing high school.
-                            </p>
+                            <span class="timeline-year">2024 — 2025</span>
+                            <h3>Lead Developer / Lingo AI</h3>
+                            <p>Full-stack development of a conversational AI platform for adaptive education (React, Python, Neo4j).</p>
                         </div>
-                        
-                        <div class="timeline-item">
-                            <h3>High School Diploma</h3>
-                            <p class="institution">Henry M. Gunn High School</p>
-                            <p class="date">Graduated June 2022</p>
-                            <p class="description">
-                                Strong foundation in STEM subjects with focus on 
-                                technology and innovation.
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="experience">
-                        <h2>Experience</h2>
                         <div class="timeline-item">
-                            <h3>AI Research & Development</h3>
-                            <p class="company">Independent Projects</p>
-                            <p class="date">2023 - Present</p>
-                            <p class="description">
-                                Developed comprehensive AI-powered language learning platform with Neo4j graph database 
-                                and real-time voice interaction. Created federated learning systems for privacy-preserving 
-                                recommendations. Built local advertisement content generation systems using multi-modal AI.
-                            </p>
+                            <span class="timeline-year">2025</span>
+                            <h3>Project Lead / AIfordable Groceries</h3>
+                            <p>Transformed legacy systems into an AI-powered platform with predictive analytics and automated workflows.</p>
                         </div>
-                        
-                        <div class="timeline-item">
-                            <h3>Sole Proprietor</h3>
-                            <p class="company">Silicon Valley Tech Help (SVTH)</p>
-                            <p class="date">Jan 2022 - Aug 2022</p>
-                            <p class="description">
-                                Founded and operated tech consulting business providing in-home 
-                                support, network setup, and cybersecurity advisory. Managed 
-                                client relationships and business operations independently.
-                            </p>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <h3>Product Designer & Patent Holder</h3>
-                            <p class="company">Purple Mountain Innovations</p>
-                            <p class="date">2018 - Mar 2022</p>
-                            <p class="description">
-                                Led CAD design and created all patent drawings for innovative braking system 
-                                for wheeled recreational devices. Successfully obtained U.S. Patent #11,220,244. 
-                                Developed rapid prototyping and manufacturing expertise.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="certifications">
-            <div class="container">
-                <h2>Patents, Certifications & Qualifications</h2>
-                <div class="cert-grid">
-                    <div class="cert-item">
-                        <h3>U.S. Patent #11,220,244</h3>
-                        <p>Soft Tipped Pole and Braking System for Recreational Use</p>
-                        <p class="cert-date">Granted Jan 2022</p>
-                    </div>
-                    <div class="cert-item">
-                        <h3>Neo4j Certified Professional</h3>
-                        <p>Neo4j</p>
-                        <p class="cert-date">May 2025</p>
-                        <p><a href="https://graphacademy.neo4j.com/c/8bfbe7b6-02bc-44b2-8711-15d9b1874c0c/" target="_blank">View Credential</a></p>
-                    </div>
-                    <div class="cert-item">
-                        <h3>SolidWorks 3D CAD Modeling</h3>
-                        <p>Dassault Systèmes</p>
-                        <p class="cert-date">Certified</p>
-                    </div>
-                    <div class="cert-item">
-                        <h3>Cybersecurity & Penetration Testing</h3>
-                        <p>Udemy Professional Course</p>
-                        <p class="cert-date">Completed</p>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2018 — 2022</span>
+                            <h3>Product Designer / Purple Mountain</h3>
+                            <p>Lead CAD designer. Secured U.S. Patent #11,220,244 for braking systems.</p>
+                        </div>
+
+                        <span class="hero-label" style="margin: 3rem 0 2rem; display: block;">// EDUCATION</span>
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-year">2022 — 2025</span>
+                            <h3>University of Groningen</h3>
+                            <p>BSc Artificial Intelligence. Thesis: Agent-based Conversational Tutoring.</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Will Hermann. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/coding-crying" aria-label="GitHub" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/william-hermann" aria-label="LinkedIn" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="js/script.js"></script>
 </body>

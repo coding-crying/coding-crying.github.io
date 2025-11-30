@@ -3,135 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thesis Access Request - Will Hermann</title>
+    <title>Research Access | Will Hermann</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .access-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-        .access-card {
-            background: var(--bg-card);
-            border: 2px solid var(--primary-color);
-            border-radius: var(--border-radius);
-            padding: 3rem;
-            margin: 2rem 0;
-        }
-        .lock-icon {
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-        }
-        .access-title {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-        .access-description {
-            color: var(--text-light);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-        .document-info {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--primary-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            text-align: left;
-        }
-        .document-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .document-info ul {
-            color: var(--text-light);
-            list-style-position: inside;
-        }
-        .access-notice {
-            background: rgba(167, 139, 250, 0.1);
-            border: 1px solid var(--primary-color);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
-        }
-        .access-notice h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h2>Will Hermann</h2>
-                </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">Will Hermann</a>
+            </div>
+            <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="projects.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <div class="access-container">
-            <div class="access-card">
-                <div class="lock-icon">🔒</div>
-                <h1 class="access-title">Protected Document Access</h1>
-                
-                <p class="access-description">
-                    This thesis contains proprietary research and innovative system designs for 
-                    an advanced conversational AI language tutor with novel architectural approaches.
+        <section class="section">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🔒</div>
+                <h1>Protected Research.</h1>
+                <p class="subtitle" style="margin: 0 auto 3rem auto;">
+                    This document contains proprietary architectural designs for a Neo4j-powered conversational AI system.
                 </p>
 
-                <div class="document-info">
-                    <h3>Document Details:</h3>
-                    <ul>
-                        <li><strong>Title:</strong> Neo4j-Powered Real-time Language Learning System</li>
-                        <li><strong>Type:</strong> Master's Thesis & Technical Implementation</li>
-                        <li><strong>Contents:</strong> Novel agent architecture, graph-based memory systems, production implementation details</li>
-                        <li><strong>Status:</strong> Proprietary research - controlled distribution</li>
-                    </ul>
-                </div>
-
-                <div class="access-notice">
-                    <h3>Why Restricted Access?</h3>
-                    <p>
-                        This document contains detailed implementation strategies and architectural 
-                        innovations that represent significant intellectual property. To protect 
-                        against unauthorized use while still enabling academic and professional 
-                        collaboration, access is granted on a case-by-case basis.
+                <div class="project-card" style="text-align: left; padding: 3rem; margin-bottom: 3rem;">
+                    <h3>Neo4j-Powered Real-time Language Learning System</h3>
+                    <p class="project-desc" style="margin-top: 1rem;">
+                        <strong>Type:</strong> Bachelor's Thesis & Implementation<br>
+                        <strong>Contents:</strong> Novel agent architecture, graph-based memory systems (SRS), RAG implementation.<br>
+                        <strong>Status:</strong> Controlled Distribution
+                    </p>
+                    <p class="project-desc">
+                        This document outlines significant intellectual property regarding the integration of graph databases with real-time voice agents. Access is granted on a case-by-case basis to researchers and potential collaborators.
                     </p>
                 </div>
 
-                <p class="access-description">
-                    <strong>Interested in viewing this research?</strong><br>
-                    Please contact me directly with your affiliation and intended use. 
-                    I'm happy to share with researchers, potential collaborators, and employers.
-                </p>
-
-                <div style="margin-top: 2rem;">
-                    <a href="contact.html" class="btn btn-primary btn-large">Request Access</a>
-                </div>
-
-                <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
-                    Typical response time: 24-48 hours
+                <a href="contact.html?subject=Thesis Access" class="btn btn-primary">Request Access via Email</a>
+                
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-muted);">
+                    Please include your affiliation and intended use.
                 </p>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Will Hermann. All rights reserved.</p>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2025 Will Hermann.
+            </div>
             <div class="social-links">
-                <a href="https://github.com/coding-crying" aria-label="GitHub" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/william-hermann" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/coding-crying" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/william-hermann" target="_blank">LinkedIn</a>
             </div>
         </div>
     </footer>

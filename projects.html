@@ -3,413 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Will Hermann</title>
+    <title>Archive | Will Hermann</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=editorial-new@400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h2>Will Hermann</h2>
-                </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">WILL HERMANN_</a>
+            </div>
+            <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="projects.html" class="active">Archive</a></li>
+                    <li><a href="about.html">Profile</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="projects-hero">
+        <section class="section">
             <div class="container">
-                <h1>My Projects</h1>
-                <p class="subtitle">A showcase of my development work and creative solutions</p>
-            </div>
-        </section>
+                <h1>Project Archive_</h1>
+                <p style="margin-bottom: 4rem;">A collection of experiments, research papers, and deployed systems.</p>
 
-        <section class="projects-filter">
-            <div class="container">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="ai">AI Applications</button>
-                    <button class="filter-btn" data-filter="robotics">Robotics</button>
-                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
-                    <button class="filter-btn" data-filter="design">Design & Hardware</button>
-                    <button class="filter-btn" data-filter="research">Research & Analysis</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects-grid-section">
-            <div class="container">
-                <div class="projects-grid">
+                <div class="archive-grid">
                     
-                    <div class="project-card featured" data-category="ai">
-                        <div class="project-image">
-                            <img src="images/neo4j.jpg" alt="Neo4j Language Learning Tutor">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/coding-crying/realtime-agents-language-tutor" class="btn btn-primary" target="_blank">GitHub</a>
-                                    <a href="thesis-access.html" class="btn btn-outline">Request Report Access</a>
-                                </div>
+                    <!-- Project 1 -->
+                    <article class="archive-card">
+                        <div class="card-visual" style="background-image: url('images/neo4j.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-type">Research / AI</span>
+                                <h3>Neo4j Language Tutor</h3>
+                            </div>
+                            <p>A dual-supervisor agent system featuring real-time voice interaction. It utilizes a Neo4j graph database to model user memory and track morphological acquisition patterns (SRS) over time.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-pill">Neo4j</span>
+                                <span class="tech-pill">RAG</span>
+                                <span class="tech-pill">WebRTC</span>
+                                <span class="tech-pill">Next.js</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/coding-crying/realtime-agents-language-tutor" target="_blank" class="text-link">View Code &rarr;</a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Neo4j Language Learning Tutor</h3>
-                            <p class="project-description">
-                                AI-powered conversational language tutor combining real-time voice interaction with intelligent 
-                                memory modeling. Architected and developed a comprehensive multi-language learning platform featuring 
-                                RAG-enhanced tutoring intelligence, Neo4j graph database for sophisticated spaced repetition system (SRS), 
-                                and advanced morphological analysis. Supports Russian, Spanish, and extensible to additional languages 
-                                through modular architecture design.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Next.js</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Neo4j</span>
-                                <span class="tech-tag">OpenAI Realtime API</span>
-                                <span class="tech-tag">WebRTC</span>
-                                <span class="tech-tag">Redis</span>
-                                <span class="tech-tag">Docker</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Architectural Achievements:</h4>
-                                <ul>
-                                    <li>Designed dual-supervisor agent architecture with RAG-enhanced tutoring intelligence</li>
-                                    <li>Architected Neo4j graph database schema for sophisticated memory modeling and SRS</li>
-                                    <li>Built real-time voice conversation system using OpenAI Realtime API with WebRTC</li>
-                                    <li>Implemented multi-language morphological analysis framework (Russian, Spanish + extensible)</li>
-                                    <li>Developed asynchronous learning analytics with Redis/Bull queue processing</li>
-                                    <li>Created form-specific vocabulary tracking with embedded statistics and error pattern recognition</li>
-                                    <li>Engineered production-ready Docker deployment with comprehensive API suite</li>
-                                    <li>Designed modular language configuration system for rapid expansion to new languages</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card" data-category="ai">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <div class="placeholder-content">
-                                    <h4>Flower.ai</h4>
-                                    <p>Federated Learning</p>
-                                </div>
+                    <!-- Project 2 -->
+                    <article class="archive-card">
+                        <div class="card-visual" style="background-image: url('images/flwr-head.avif');"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-type">Privacy / ML</span>
+                                <h3>Federated ActivityPub</h3>
                             </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/coding-crying/federated-activitypub-recommendations" class="btn btn-primary" target="_blank">GitHub</a>
-                                    <a href="https://flower.ai/docs/framework/" class="btn btn-outline" target="_blank">Docs</a>
-                                </div>
+                            <p>Decentralized recommendation framework. Implements Federated Learning (Flower.ai) over ActivityPub to train foundation models on user devices without sharing raw data.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-pill">PyTorch</span>
+                                <span class="tech-pill">Flower.ai</span>
+                                <span class="tech-pill">Diff. Privacy</span>
                             </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Federated ActivityPub Recommendation System</h3>
-                            <p class="project-description">
-                                Privacy-preserving federated learning for decentralized social media recommendations.
-                                Combines Foundation Models with Flower.ai to enable cross-instance collaborative intelligence
-                                without sharing raw user data across ActivityPub networks.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Flower.ai</span>
-                                <span class="tech-tag">PyTorch</span>
-                                <span class="tech-tag">Transformers</span>
-                                <span class="tech-tag">ActivityPub</span>
-                                <span class="tech-tag">LoRA</span>
-                                <span class="tech-tag">Differential Privacy</span>
-                                <span class="tech-tag">FastAPI</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Three-tier federated architecture (clients → aggregators → global)</li>
-                                    <li>Foundation model integration with LoRA adapters</li>
-                                    <li>Differential privacy (ε=8, δ=10⁻⁵) for semantic privacy</li>
-                                    <li>Real-time recommendations with &lt;100ms latency targets</li>
-                                    <li>Byzantine-robust aggregation with outlier detection</li>
-                                    <li>ActivityPub-native integration for decentralized platforms</li>
-                                </ul>
+                            <div class="card-actions">
+                                <a href="https://github.com/coding-crying/federated-activitypub-recommendations" target="_blank" class="text-link">Repo &rarr;</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card" data-category="robotics">
-                        <div class="project-image">
-                            <img src="images/hoody-robot.jpg" alt="Hoody - Smart Kitchen Hood Robot">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="docs/social-robotics-report.pdf" class="btn btn-primary" target="_blank">View Report</a>
-                                </div>
+                    <!-- Project 3 -->
+                    <article class="archive-card">
+                        <div class="card-visual" style="background-image: url('images/hoody-robot.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-type">Robotics / Vision</span>
+                                <h3>Hoody Assistant</h3>
+                            </div>
+                            <p>Research prototype for an intelligent kitchen assistant integrated into a range hood. Features thermal imaging and hand tracking for safety monitoring and cooking guidance.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">OpenCV</span>
+                                <span class="tech-pill">IoT</span>
+                                <span class="tech-pill">HRI</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="docs/social-robotics-report.pdf" target="_blank" class="text-link">Read Paper &rarr;</a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Hoody - Intelligent Kitchen Assistant Robot</h3>
-                            <p class="project-description">
-                                Research project developing an AI-powered social robot integrated into a kitchen hood 
-                                form factor. Addresses challenges in home cooking through advanced multimodal interaction, 
-                                real-time environmental monitoring, and personalized culinary guidance systems.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">ChatGPT Real-time API</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Thermal Imaging</span>
-                                <span class="tech-tag">Hand Tracking</span>
-                                <span class="tech-tag">IoT Integration</span>
-                                <span class="tech-tag">Sensor Fusion</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">3D Modeling</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Research Contributions:</h4>
-                                <ul>
-                                    <li>Novel integration of LLM with kitchen appliance hardware</li>
-                                    <li>Multi-sensor fusion for real-time cooking state detection</li>
-                                    <li>Computer vision-based hand gesture classification system</li>
-                                    <li>User-centered design methodology for kitchen robotics</li>
-                                    <li>Adaptive recipe management with IoT ecosystem integration</li>
-                                    <li>Safety-critical AI system with multimodal override capabilities</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card" data-category="ml">
-                        <div class="project-image">
-                            <div class="catboost-placeholder">
-                                <div class="catboost-logo">
-                                    <h3 style="margin: 0; font-size: 2rem;">CatBoost</h3>
-                                    <p style="font-size: 0.9rem; opacity: 0.8; margin: 0.5rem 0;">Movie Score Prediction</p>
-                                </div>
+                    <!-- Project 4 -->
+                    <article class="archive-card">
+                        <div class="card-visual" style="background-image: url('images/patent-design.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-type">Hardware / Patent</span>
+                                <h3>Braking System Patent</h3>
                             </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/MirkoRUG/Applied-ML-Group17" class="btn btn-primary" target="_blank">GitHub</a>
-                                </div>
+                            <p>U.S. Patent #11,220,244. A novel soft-tipped braking mechanism for recreational devices (skateboards, roller skis). Designed using SolidWorks and rapid prototyping.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-pill">SolidWorks</span>
+                                <span class="tech-pill">Prototyping</span>
+                                <span class="tech-pill">Patent Law</span>
                             </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Movie Score Prediction ML System</h3>
-                            <p class="project-description">
-                                End-to-end machine learning pipeline using CatBoost regression to predict IMDb 
-                                movie scores. Ensemble models learning achieved excellent performance with 
-                                RMSE ~0.3, demonstrating comprehensive hyperparameter optimization and production deployment.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">CatBoost</span>
-                                <span class="tech-tag">Optuna</span>
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Python</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Key Achievements:</h4>
-                                <ul>
-                                    <li>Excellent ensemble model performance (RMSE ~0.3)</li>
-                                    <li>17% performance improvement over baseline methods</li>
-                                    <li>Bayesian hyperparameter optimization with 50 trials</li>
-                                    <li>Production-ready FastAPI deployment with Docker</li>
-                                    <li>Comprehensive evaluation with 5-fold cross-validation</li>
-                                    <li>Interactive Streamlit web interface for predictions</li>
-                                    <li>Robust preprocessing pipeline with outlier detection</li>
-                                </ul>
+                            <div class="card-actions">
+                                <a href="https://patents.justia.com/patent/11220244" target="_blank" class="text-link">View Patent &rarr;</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card" data-category="design">
-                        <div class="project-image">
-                            <img src="images/patent-design.jpg" alt="Patented Braking System Design">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://patents.justia.com/patent/11220244" class="btn btn-primary" target="_blank">View Patent</a>
-                                </div>
+                    <!-- Project 5 -->
+                    <article class="archive-card">
+                        <div class="card-visual" style="background-image: url('images/cogmod-wander-retrieval.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-type">Cognitive Science</span>
+                                <h3>ACT-R Mind Wandering</h3>
+                            </div>
+                            <p>Computational modeling of rumination using the ACT-R architecture. Simulates spreading activation in emotional memory to predict attention lapses.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-pill">ACT-R</span>
+                                <span class="tech-pill">Lisp</span>
+                                <span class="tech-pill">Cognitive Modeling</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="Mind Wandering Cognitive Modelling.pdf" target="_blank" class="text-link">Download PDF &rarr;</a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Patented Athletic Device Design</h3>
-                            <p class="project-description">
-                                Led CAD design and created all patent drawings for an innovative braking system 
-                                for wheeled recreational devices. Designed multiple iterations optimizing 
-                                manufacturability and user experience for skateboards, roller skis, and 
-                                caster boards through engineered soft-tip pole technology.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">SolidWorks CAD</span>
-                                <span class="tech-tag">Patent Drawings</span>
-                                <span class="tech-tag">Product Design</span>
-                                <span class="tech-tag">Patent Prosecution</span>
-                                <span class="tech-tag">Manufacturing</span>
-                                <span class="tech-tag">Prototyping</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Development Achievements:</h4>
-                                <ul>
-                                    <li>U.S. Patent #11,220,244 granted (January 2022)</li>
-                                    <li>Lead CAD designer and creator of all patent technical drawings</li>
-                                    <li>Iterative design process optimizing manufacturability</li>
-                                    <li>Soft elastomeric tip with fulcrum mechanics innovation</li>
-                                    <li>Enhanced safety and learning curve for wheeled sports</li>
-                                    <li>Navigated complex patent prosecution to strong IP protection</li>
-                                    <li>Designed for multiple wheeled platforms (skateboards, roller skis)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
-
-                    <div class="project-card" data-category="research">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <div class="placeholder-content">
-                                    <h4>Cognitive Model</h4>
-                                    <p>ACT-R Architecture</p>
-                                </div>
+                    <!-- Project 6 -->
+                    <article class="archive-card">
+                         <!-- Gradient Fallback -->
+                        <div class="card-visual" style="background: linear-gradient(135deg, #2e1065, #000000);"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <span class="card-type">GenAI Application</span>
+                                <h3>Local Ad Engine</h3>
                             </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="Mind Wandering Cognitive Modelling.pdf" class="btn btn-primary" target="_blank">Download Paper</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Cognitive Modeling of Mind-Wandering and Rumination</h3>
-                            <p class="project-description">
-                                Research investigating spreading activation in emotional memory and its effects on 
-                                mind-wandering episodes using ACT-R cognitive architecture. Explores how memory 
-                                activation capacity influences rumination persistence and attention task performance.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">ACT-R</span>
-                                <span class="tech-tag">Cognitive Modeling</span>
-                                <span class="tech-tag">SART</span>
-                                <span class="tech-tag">Memory Activation</span>
-                                <span class="tech-tag">Statistical Analysis</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Research Findings:</h4>
-                                <ul>
-                                    <li>Computational model of rumination using spreading activation</li>
-                                    <li>ANOVA analysis showing significant differences across conditions</li>
-                                    <li>Evidence that higher activation capacity leads to persistent rumination</li>
-                                    <li>Sustained Attention to Response Task (SART) simulation</li>
-                                    <li>Quantitative support for negative memory bias theories</li>
-                                </ul>
+                            <p>Privacy-first marketing engine. Pipelines trend data into local LLMs (Mistral) for copy and diffusion models (Flux) for asset generation, running entirely offline.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-pill">Local LLM</span>
+                                <span class="tech-pill">Flux</span>
+                                <span class="tech-pill">Mistral</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="project-card" data-category="ai">
-                        <div class="project-image">
-                        <div class="ad-engine-placeholder">
-                            <div class="placeholder-content">
-                                <h4>Local Ad Engine</h4>
-                                <p>Content Generation System</p>
-                            </div>
-                        </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/coding-crying" class="btn btn-primary" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Local Advertisement Content Generation System</h3>
-                            <p class="project-description">
-                                Fully local advertisement planning and content generation pipeline combining web trend analysis 
-                                with multi-modal AI content creation. Designed as a self-contained marketing engine that operates 
-                                without external API dependencies, ensuring data privacy and cost efficiency.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Tongyi Deep Research</span>
-                                <span class="tech-tag">Wan 2.2 Animate</span>
-                                <span class="tech-tag">Flux</span>
-                                <span class="tech-tag">Mistral 3.2</span>
-                                <span class="tech-tag">Local LLM</span>
-                                <span class="tech-tag">Trend Analysis</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>System Architecture:</h4>
-                                <ul>
-                                    <li>Web trend analysis using Tongyi Deep Research for market intelligence</li>
-                                    <li>Automated script generation with Mistral 3.2 for ad copywriting</li>
-                                    <li>Visual content creation using Wan 2.2 Animate and Flux for graphics</li>
-                                    <li>Local deployment ensuring data privacy and offline operation</li>
-                                    <li>Integrated pipeline from trend detection to final ad assets</li>
-                                    <li>Performance monitoring and content optimization feedback loops</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="research">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <div class="placeholder-content">
-                                    <h4>TrueSelect©</h4>
-                                    <p>AI Recruitment Analysis</p>
-                                </div>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="Domain_Analysis Project.pdf" class="btn btn-primary" target="_blank">View Report</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>TrueSelect© - AI Recruitment Domain Analysis</h3>
-                            <p class="project-description">
-                                Comprehensive domain analysis examining AI-driven recruitment systems for tech companies. 
-                                Explores stakeholder dynamics, bias mitigation, and EU AI Act compliance for 
-                                automated candidate screening and evaluation.
-                            </p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Domain Analysis</span>
-                                <span class="tech-tag">AI Ethics</span>
-                                <span class="tech-tag">Game Theory</span>
-                                <span class="tech-tag">EU AI Act</span>
-                                <span class="tech-tag">Bias Mitigation</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>Key Contributions:</h4>
-                                <ul>
-                                    <li>Game-theoretic stakeholder analysis framework</li>
-                                    <li>Comprehensive bias mitigation strategies</li>
-                                    <li>EU AI Act compliance requirements mapping</li>
-                                    <li>Multi-granular evaluation system design</li>
-                                    <li>Scenario-based use case analysis</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
                 </div>
-            </div>
-        </section>
-
-
-        <section class="cta-section">
-            <div class="container">
-                <h2>Interested in Working Together?</h2>
-                <p>I'm always open to discussing new opportunities and exciting projects.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Will Hermann. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/coding-crying" aria-label="GitHub" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/william-hermann" aria-label="LinkedIn" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="js/script.js"></script>
 </body>
